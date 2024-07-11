@@ -14,7 +14,7 @@ export const getEmployeeForm = async (req: express.Request, res: express.Respons
 export const postEmployeeForm = async (req: express.Request, res: express.Response): Promise<void> => {
     try{
         const id = await createEmployee(req.body);
-        res.redirect('/employee');
+        res.redirect('/employees');
     } catch(e){
         res.locals.errormessage = e.message;
         res.render('employeeForm.html', req.body);
