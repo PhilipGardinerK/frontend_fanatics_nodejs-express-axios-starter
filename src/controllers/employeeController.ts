@@ -5,18 +5,18 @@ export const getAllEmployees = async (req: express.Request, res: express.Respons
     res.render('employeeList.html', { employees: await getEmployees() })
 }
 
-export const getEmployeeForm = async (req: express.Request, res: express.Response): Promise<void> => {
+export const getDeliveryEmployeeForm = async (req: express.Request, res: express.Response): Promise<void> => {
     console.log(req.params.id);
-    res.render('employeeForm.html');
+    res.render('deliveryEmployeeForm.html');
 }
 
 
-export const postEmployeeForm = async (req: express.Request, res: express.Response): Promise<void> => {
+export const postDeliveryEmployeeForm = async (req: express.Request, res: express.Response): Promise<void> => {
     try{
         const id = await createEmployee(req.body);
         res.redirect('/employees');
     } catch(e){
         res.locals.errormessage = e.message;
-        res.render('employeeForm.html', req.body);
+        res.render('deliveryEmployeeForm.html', req.body);
     }
 }
