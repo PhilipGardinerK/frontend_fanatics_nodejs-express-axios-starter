@@ -9,7 +9,7 @@ import { employeeRequest } from "../models/employeeRequest";
             return response.data;
     } catch (e) {
         console.log(e);
-        throw new Error('Failed to get employees');
+        throw new Error('Failed to get orders');
     }
 }
     export const createEmployee = async (employee: employeeRequest): Promise<Number> => {
