@@ -8,7 +8,12 @@
             <table>
                 <tr>
                     <th>Employee ID</th>
-                    <th>Name of employee</th>     
+                    <th>First name of employee</th>  
+                    <th>Last name of employee</th>   
+                    <th>bank account number</th>
+                    <th>national insurance number</th>
+                    <th>salary</th>
+                    <th>commission rate</th>
                 </tr>
                 {% for employee in employees | sort(attribute='employeeFname') %}
                 <tr>
