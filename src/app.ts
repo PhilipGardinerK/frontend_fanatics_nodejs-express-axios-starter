@@ -34,7 +34,7 @@ app.listen(3000, () => {
     console.log('Server started on port 3000');
 });
 
-//app.get('/employees', getAllEmployees);
+app.get('/employees', getAllEmployees);
 app.get('/deliveryEmployeeForm', getDeliveryEmployeeForm);
 app.post('/deliveryEmployeeForm', postDeliveryEmployeeForm);
 app.get('/loginForm', getLoginForm);
