@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create an Employee</title>
+    </head>
+    <body>  
+        <h1>Create an Employee</h1>
+
+        {% if errormessage %}
+            <h3>{{ errormessage }}</h3>
+        {% endif %}
+
+        <form class="form" action="/employeeForm" method="post">
+            <h3><label for="employeeFname">
+                First Name:
+            </label></h3>
+            <input id="employeeFname" name="employeeFname" value="{{ employeeFname }}" type="text">
+
+            <h3><label for="employeeLname">
+                Last Name:
+            </label></h3>
+            <input id="employeeLname" name="employeeLname" value="{{ employeeLname }}" type="text">
+
+            <h3>
+                <label for="bankAcctNo">
+                  Bank Acct Number:      
+                </label></h3>
+            <input id="bankAcctNo" name="bankAcctNo" value="{{ bankAcctNo }}" type="text">
+                
+            <h3>
+                <label for="niNo">
+                    National Insurance Number: 
+                </label></h3>
+            <input id="niNo" name="niNo" value="{{ niNo }}" type="text">
+
+            <h3>
+                <label for="salary">
+                    Salary: 
+                </label></h3>
+            <input id="salary" name="salary" value="{{ salary }}" type="number">
+
+            <h3>
+                <label for="commRate">
+                    Commission Rate: 
+                </label></h3>
+            <input id="commRate" name="commRate" value="{{ commRate }}" type="number">
+
+            <h3>
+                <label for="roleID">
+                   Delivery Employee: 
+                </label></h3>
+            <input id="roleID" name="roleID" value="2" type="number">
+
+            </br></br>
+
+            <button id="submit">Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee List</title>
+        <body>
+            <h1>Employees</h1>
+    </head>
+            <table>
+                <tr>
+                    <th>Employee ID</th>
+                    <th>Name of employee</th>     
+                </tr>
+                {% for employee in employees | sort(attribute='employeeFname') %}
+                <tr>
+                    <td><a href="/employees/{{employee.employeeID}}">{{employee.employeeID }}</a></td>
+                    <td>{{employee.employeeFname }}</td>
+                    <td>{{employee.employeeLname }}</td>
+                    <td>{{employee.bankAcctNo }}</td>
+                    <td>{{employee.niNo }}</td>
+                    <td>{{employee.salary }}</td>
+                    <td>{{employee.commRate }}</td>
+                </tr>
+                {% endfor %}
+        </body>
+</html>
