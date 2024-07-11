@@ -34,8 +34,8 @@ app.listen(3000, () => {
     console.log('Server started on port 3000');
 });
 
-app.get('/employees', allowRoles([UserRole.HR]), getAllEmployees);
-app.get('/employeeForm', allowRoles([UserRole.HR]), getEmployeeForm);
-app.post('/employeeForm', allowRoles([UserRole.HR]), postEmployeeForm);
+app.get('/employees', getAllEmployees);
+app.get('/employeeForm', getEmployeeForm);
+app.post('/employeeForm', postEmployeeForm);
 app.get('/loginForm', getLoginForm);
 app.post('/loginForm', postLoginForm);

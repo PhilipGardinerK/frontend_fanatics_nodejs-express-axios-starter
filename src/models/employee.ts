@@ -9,4 +9,5 @@ export type employeeResponse = {
     salary: Number, 
     commRate: Number;
 
+
 }
