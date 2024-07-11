@@ -4,7 +4,7 @@ import bodyParser from "body-parser";
 import session from "express-session";
 
 import { getAllDatabases } from "./controllers/TestController";
-import { getAllEmployees, getEmployeeForm, postEmployeeForm } from "./controllers/employeeController";
+import { getAllEmployees, getDeliveryEmployeeForm, postDeliveryEmployeeForm } from "./controllers/employeeController";
 import { getLoginForm, postLoginForm } from "./controllers/AuthController";
 import { UserRole } from "./models/JwtToken";
 import { allowRoles } from "./middleware/AuthMiddleware";
@@ -34,8 +34,8 @@ app.listen(3000, () => {
     console.log('Server started on port 3000');
 });
 
-app.get('/employees', getAllEmployees);
-app.get('/employeeForm', getEmployeeForm);
-app.post('/employeeForm', postEmployeeForm);
+//app.get('/employees', getAllEmployees);
+app.get('/deliveryEmployeeForm', getDeliveryEmployeeForm);
+app.post('/deliveryEmployeeForm', postDeliveryEmployeeForm);
 app.get('/loginForm', getLoginForm);
 app.post('/loginForm', postLoginForm);
