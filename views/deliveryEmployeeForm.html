@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Create an Employee</title>
+        <title>Create a Delivery employee</title>
     </head>
     <body>  
-        <h1>Create an Employee</h1>
+        <h1>Create a Delivery employee:</h1>
 
         {% if errormessage %}
             <h3>{{ errormessage }}</h3>
         {% endif %}
 
-        <form class="form" action="/employeeForm" method="post">
+        <form class="form" action="/deliveryEmployeeForm" method="post">
             <h3><label for="employeeFname">
                 First Name:
             </label></h3>
@@ -45,11 +45,7 @@
                 </label></h3>
             <input id="commRate" name="commRate" value="{{ commRate }}" type="number">
 
-            <h3>
-                <label for="roleID">
-                   Delivery Employee: 
-                </label></h3>
-            <input id="roleID" name="roleID" value="2" type="number">
+           
 
             </br></br>
 
